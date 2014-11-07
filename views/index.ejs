@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<script src="http://192.168.1.103:81/socket.io/socket.io.js"></script>
+		<script>var socket = io.connect("http://192.168.1.103:81");</script>
+		<title><%= title %></title>
+	</head>
+	<body>
+		<h1><%= title %></h1>
+		<p><%= message %></p>
+		<button onclick="socket.emit('prender');">Prender!</button>
+		<button onclick="socket.emit('apagar');">Apagar!</button><br/><br/>
+		<button onclick="socket.emit('up_speed')">+</button>
+		<button onclick="socket.emit('parpadear')">Parpadear!</button>
+		<button onclick="socket.emit('down_speed')">-</button>
+	</body>
+</html>
